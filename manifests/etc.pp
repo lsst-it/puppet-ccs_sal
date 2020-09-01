@@ -16,10 +16,10 @@ class ccs_sal::etc {
   file { "${dir}/${salfile}":
     ensure  => file,
     content => epp("${ptitle}/${salfile}", {
-      'domain' => $ccs_sal::dds_domain,
-      'home'   => $ccs_sal::ospl_home,
-    }
-                  ),
+        'domain' => $ccs_sal::dds_domain,
+        'home'   => $ccs_sal::ospl_home,
+      },
+    ),
     *       => $attributes,
   }
 
@@ -30,12 +30,14 @@ class ccs_sal::etc {
   ## You would have to force it by eg deleting the destination file.
   exec { "Create ${dir}/${osplfile}":
     path    => ['/usr/bin'],
+    # lint:ignore:strict_indent
     command => @("CMD"/L),
       sh -c "sed 's|^\( *<NetworkInterfaceAddress>\).*|\
       \1${ccs_sal::address}</NetworkInterfaceAddress>|' \
       ${ccs_sal::ospl_home}/etc/config/${osplfile} > \
       ${dir}/${osplfile}"
       | CMD
+    # lint:endignore
     unless  => "grep -q ${ccs_sal::address} ${dir}/${osplfile}",
     user    => $attributes['owner'],
   }
