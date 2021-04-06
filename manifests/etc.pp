@@ -5,7 +5,7 @@ class ccs_sal::etc {
   $attributes = {
     'owner' => 'ccsadm',
     'group' => 'ccsadm',
-    'mode'  => '0644',
+    'mode'  => '0664',
   }
 
 
