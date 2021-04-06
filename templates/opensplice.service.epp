@@ -3,7 +3,8 @@
       String $group,
       String $start,
       String $stop,
-      String $workdir
+      String $workdir,
+      String $env
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
 [Unit]
@@ -14,6 +15,7 @@ After=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=<%= $workdir %>
+Environment=<%= $env %>
 ExecStart=<%= $start %>
 ExecStop=<%= $stop %>
 Restart=on-failure

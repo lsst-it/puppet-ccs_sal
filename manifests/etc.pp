@@ -16,39 +16,22 @@ class ccs_sal::etc {
   file { "${dir}/${salfile}":
     ensure  => file,
     content => epp("${ptitle}/${salfile}", {
-        'domain' => $ccs_sal::dds_domain,
-        'home'   => $ccs_sal::ospl_home,
+        'domain'    => $ccs_sal::dds_domain,
+        'interface' => $ccs_sal::dds_interface,
+        'home'      => $ccs_sal::ospl_home,
       },
     ),
     *       => $attributes,
   }
 
 
-  $osplfile = 'ospl5.xml'
-
-  ## Note that this will not pick up any changes in the distribution file.
-  ## You would have to force it by eg deleting the destination file.
-  exec { "Create ${dir}/${osplfile}":
-    path    => ['/usr/bin'],
-    # lint:ignore:strict_indent
-    command => @("CMD"/L),
-      sh -c "sed 's|^\( *<NetworkInterfaceAddress>\).*|\
-      \1${ccs_sal::address}</NetworkInterfaceAddress>|' \
-      ${ccs_sal::ospl_home}/etc/config/ospl.xml > \
-      ${dir}/${osplfile}"
-      | CMD
-    # lint:endignore
-    unless  => "grep -q ${ccs_sal::address} ${dir}/${osplfile}",
-    user    => $attributes['owner'],
-  }
-
-
-  $qosfile = 'QoS5.xml'
-
-  file { "${dir}/${qosfile}":
-    ensure => file,
-    source => "puppet:///modules/${ptitle}/${qosfile}",
-    *      => $attributes,
+  ['ospl-shmem.xml', 'QoS.xml'].each|$thing| {
+    $file = "${dir}/${thing}"
+    file { $file:
+      ensure => present,
+      source => "puppet:///modules/${ptitle}/${thing}",
+      *      => $attributes,
+    }
   }
 
 

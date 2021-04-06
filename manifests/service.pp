@@ -7,6 +7,7 @@ class ccs_sal::service {
     user    => 'ccs',
     group   => 'ccs',
     workdir => '/home/ccs',
+    env     => 'LSST_DDS_RESPONSIVENESS_TIMEOUT=15s',
     start   => "/bin/bash -c 'source ${setupfile} && \$OSPL_HOME/bin/ospl -f start'",
     stop    => "/bin/bash -c 'source ${setupfile} && \$OSPL_HOME/bin/ospl stop'",
   }
