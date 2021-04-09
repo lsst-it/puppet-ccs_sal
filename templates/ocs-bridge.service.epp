@@ -3,13 +3,15 @@
       String $group,
       String $start,
       String $workdir,
-      String $env = ''
+      String $env = '',
+      String $conflicts = ''
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
 [Unit]
 Description=<%= $desc %>
 Wants=network-online.target
 After=network-online.target
+Conflicts=<%= $conflicts %>
 
 [Service]
 Type=simple
