@@ -2,9 +2,9 @@
       String $user,
       String $group,
       String $start,
-      String $stop,
+      Optional[String] $stop = undef,
       String $workdir,
-      String $env
+      Optional[String] $env = undef
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
 [Unit]
@@ -15,9 +15,13 @@ After=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=<%= $workdir %>
+<% unless $env =~ Undef { -%>
 Environment=<%= $env %>
+<% } -%>
 ExecStart=<%= $start %>
+<% unless $stop =~ Undef { -%>
 ExecStop=<%= $stop %>
+<% } -%>
 Restart=on-failure
 RestartSec=42s
 User=<%= $user %>
