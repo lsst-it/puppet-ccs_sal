@@ -1,0 +1,25 @@
+<%- | String $desc,
+      String $user,
+      String $group,
+      String $start,
+      String $workdir,
+      String $env = ''
+| -%>
+# This file is managed by Puppet; changes may be overwritten.
+[Unit]
+Description=<%= $desc %>
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=<%= $workdir %>
+Environment=<%= $env %>
+ExecStart=<%= $start %>
+Restart=on-failure
+RestartSec=42s
+User=<%= $user %>
+Group=<%= $group %>
+
+[Install]
+WantedBy=multi-user.target
