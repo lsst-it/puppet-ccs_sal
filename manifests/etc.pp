@@ -50,4 +50,15 @@ class ccs_sal::etc {
   }
 
 
+  ## Stop tmpfiles.d removing opensplice sockets.
+  $tmpfiles_conf = 'ccs-ospl.conf'
+
+  file { "/etc/tmpfiles.d/${tmpfiles_conf}":
+    ensure => present,
+    source => "puppet:///modules/${ptitle}/${tmpfiles_conf}",
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+  }
+
 }

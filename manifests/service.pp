@@ -40,6 +40,7 @@ class ccs_sal::service {
     }
   }
 
+  ## FIXME ccs_software module can also manage basic services.
   $services = [$opensplice, $ocs_bridge, $mcm]
 
   $services.each | $hash | {
