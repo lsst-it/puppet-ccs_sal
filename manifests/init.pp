@@ -15,7 +15,7 @@
 
 class ccs_sal (
   Hash[String,String,2] $rpms,
-  String $ospl_home = '/opt/OpenSpliceDDS/V6.11.0-16/HDE/x86_64.linux',
+  String $ospl_home = '/opt/OpenSpliceDDS/V6.11.0/HDE/x86_64.linux',
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
   String $instrument = 'comcam',
