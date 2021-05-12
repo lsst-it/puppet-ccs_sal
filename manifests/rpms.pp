@@ -15,9 +15,13 @@ class ccs_sal::rpms {
     }
 
     package { $package:
-      ensure   => 'latest',
-      provider => 'rpm',
-      source   => $file,
+      ensure       => 'latest',
+      provider     => 'rpm',
+      source       => $file,
+      ## Following allows us to have multiple versions installed.
+      ## Must include the version+release in the package name.
+      ## Eg instead of "OpenSpliceDDS", use "OpenSpliceDDS-6.11.0-16.el7".
+      install_only => true,
     }
   }
 
