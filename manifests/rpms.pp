@@ -15,7 +15,7 @@ class ccs_sal::rpms {
     }
 
     package { $package:
-      ensure   => 'installed',
+      ensure   => 'latest',
       provider => 'rpm',
       source   => $file,
     }
