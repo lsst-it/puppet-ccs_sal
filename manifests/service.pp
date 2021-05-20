@@ -12,7 +12,6 @@ class ccs_sal::service {
 
   $opensplice = {
     service  => 'opensplice',
-    template => 'opensplice',
     vars     => {
       desc  => 'OpenSpliceDDS daemons',
       env   => 'LSST_DDS_RESPONSIVENESS_TIMEOUT=15s',
@@ -23,7 +22,6 @@ class ccs_sal::service {
 
   $ocs_bridge = {
     service  => "ocs-bridge-${instrument}",
-    template => 'ocs-bridge',
     vars     => {
       desc  => "CCS OCS bridge for ${instrument}",
       env   => 'LSST_DDS_HISTORYSYNC=0',
@@ -33,7 +31,6 @@ class ccs_sal::service {
 
   $mcm = {
     service  => "mcm-${instrument}",
-    template => 'mcm',
     vars     => {
       desc    => "CCS MCM for ${instrument}",
       start   => "/opt/lsst/ccs/prod/bin/mcm-${instrument}",
@@ -45,7 +42,6 @@ class ccs_sal::service {
 
   $services.each | $hash | {
     $service  = $hash['service']
-    $template = $hash['template']
     $epp_vars = $common_vars + $hash['vars']
     systemd::unit_file { "${service}.service":
       content => epp("${module_name}/service.epp", $epp_vars),
