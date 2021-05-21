@@ -12,6 +12,8 @@
 ##   String giving name of SAL interface (eg somehost-dds)
 ## @param instrument
 ##   String giving instrument (eg comcam).
+## @param rpm_repo, rpm_user, rpm_pass
+##   Strings giving repo url, username and password for rpm download.
 
 class ccs_sal (
   Hash[String,String,2] $rpms,
@@ -19,6 +21,11 @@ class ccs_sal (
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
   String $instrument = 'comcam',
+  ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
+  String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum_private/releases',
+  ## In lsst-puppet-hiera-private.
+  Optional[String] $rpm_user = undef,
+  Optional[String] $rpm_pass = undef,
 ) {
 
   include ccs_sal::rpms

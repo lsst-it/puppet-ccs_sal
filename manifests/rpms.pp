@@ -3,7 +3,9 @@ class ccs_sal::rpms {
   ## Needed by ts_sal_utils.
   ensure_packages(['linuxptp'])
 
-  $ccs_pkgarchive = lookup('ccs_pkgarchive', String)
+  $repo = $ccs_sal::rpm_repo
+  $user = $ccs_sal::rpm_user
+  $pass = $ccs_sal::rpm_pass
 
   $ccs_sal::rpms.each |$package, $rpm| {
 
@@ -11,7 +13,17 @@ class ccs_sal::rpms {
 
     archive { $file:
       ensure => present,
-      source => "${ccs_pkgarchive}/${rpm}",
+      source => "${repo}/${rpm}",
+    }
+    if $user !~ Undef {
+      Archive[$file] {
+        username => $user,
+      }
+    }
+    if $pass !~ Undef {
+      Archive[$file] {
+        password => $pass,
+      }
     }
 
     package { $package:
