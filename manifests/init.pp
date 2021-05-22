@@ -17,7 +17,8 @@
 
 class ccs_sal (
   Hash[String,String,2] $rpms,
-  String $ospl_home = '/opt/OpenSpliceDDS/V6.10.4/HDE/x86_64.linux',
+  ## Change the following in hiera, not here.
+  String $ospl_home = '/opt/OpenSpliceDDS/VX.Y.Z/example/example',
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
   String $instrument = 'comcam',
