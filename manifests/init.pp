@@ -12,18 +12,26 @@
 ##   String giving name of SAL interface (eg somehost-dds)
 ## @param instrument
 ##   String giving instrument (eg comcam).
-## @param rpm_repo, rpm_user, rpm_pass
-##   Strings giving repo url, username and password for rpm download.
+## @param rpm_repo
+##   String giving repo url for rpm download
+## @param rpms_private
+##   Optional hash of rpms to download from private repo.
+## @param rpm_repo_private, rpm_user, rpm_pass
+##   Optional strings giving private rpm repo, username and password
 
 class ccs_sal (
-  Hash[String,String,2] $rpms,
+  Hash[String,String,1] $rpms,
   ## Change the following in hiera, not here.
   String $ospl_home = '/opt/OpenSpliceDDS/VX.Y.Z/example/example',
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
   String $instrument = 'comcam',
   ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
-  String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum_private/releases',
+  String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases',
+  ## If specified, rpms to fetch from _private repo using _user and _pass.
+  Hash[String,String] $rpms_private = {},
+  ## Defaults to _repo with yum -> yum_private.
+  Optional[String] $rpm_repo_private = undef,
   ## In lsst-puppet-hiera-private.
   Optional[String] $rpm_user = undef,
   Optional[String] $rpm_pass = undef,
