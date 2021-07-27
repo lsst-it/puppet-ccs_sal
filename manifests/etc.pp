@@ -37,11 +37,8 @@ class ccs_sal::etc {
 
   $instrument = $ccs_sal::instrument
 
-  $bridge = "${dir}/ocs-bridge-${instrument}.app"
-  $gui = "${dir}/ocs-bridge-${instrument}.app"
-
   ['bridge', 'gui'].each|$thing| {
-    $file = "${dir}/ocs-${thing}-${instrument}.app"
+    $file = "${dir}/${instrument}-ocs-${thing}.app"
     file { $file:
       ensure  => present,
       content => "system.pre-execute=${salfile}\n",

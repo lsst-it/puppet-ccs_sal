@@ -20,20 +20,22 @@ class ccs_sal::service {
     }
   }
 
+  ## 202107: Name changed from ocs-bridge-${instrument}
   $ocs_bridge = {
-    service  => "ocs-bridge-${instrument}",
+    service  => "${instrument}-ocs-bridge",
     vars     => {
       desc  => "CCS OCS bridge for ${instrument}",
       env   => 'LSST_DDS_HISTORYSYNC=0',
-      start => "/opt/lsst/ccs/prod/bin/ocs-bridge-${instrument}",
+      start => "/opt/lsst/ccs/prod/bin/${instrument}-ocs-bridge",
     }
   }
 
+  ## 202107: Name changed from mcm-${instrument}
   $mcm = {
-    service  => "mcm-${instrument}",
+    service  => "${instrument}-mcm",
     vars     => {
       desc    => "CCS MCM for ${instrument}",
-      start   => "/opt/lsst/ccs/prod/bin/mcm-${instrument}",
+      start   => "/opt/lsst/ccs/prod/bin/${instrument}-mcm",
     }
   }
 
