@@ -51,6 +51,16 @@ class ccs_sal::service {
     -> service { $service:
       enable => true,
     }
+
+    $epp_sudo_vars = {
+      service => $service,
+      user    => $common_vars['user'],
+    }
+
+    sudo::conf { "ccs-service-${service}":
+      content => epp("${module_name}/sudo.epp", $epp_sudo_vars),
+    }
+
   }
 
 }
