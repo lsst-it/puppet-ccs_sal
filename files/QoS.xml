@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dds xmlns="http://www.omg.org/dds/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="file:DDS_QoSProfile.xsd">
+<dds xmlns="http://www.omg.org/dds/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="file:DDS_QoSProfile.xsd">
     <qos_profile name="AckcmdProfile">
         <topic_qos>
             <durability>
@@ -461,7 +462,7 @@
                 </duration>
             </lifespan>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
         </topic_qos>
         <datareader_qos>
@@ -502,7 +503,7 @@
                 <depth>100</depth>
             </history>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
             <time_based_filter>
                 <minimum_separation>
@@ -568,7 +569,7 @@
                 </duration>
             </lifespan>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
             <ownership_strength>
                 <value>0</value>
@@ -662,7 +663,7 @@
                 </duration>
             </lifespan>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
         </topic_qos>
         <datareader_qos>
@@ -703,7 +704,7 @@
                 <depth>100</depth>
             </history>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
             <time_based_filter>
                 <minimum_separation>
@@ -769,7 +770,7 @@
                 </duration>
             </lifespan>
             <ownership>
-                <kind>EXCLUSIVE_OWNERSHIP_QOS</kind>
+                <kind>SHARED_OWNERSHIP_QOS</kind>
             </ownership>
             <ownership_strength>
                 <value>0</value>

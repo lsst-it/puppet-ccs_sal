@@ -1,11 +1,12 @@
 <OpenSplice>
     <Domain>
-        <Name>ospl_sp_ddsi</Name>
+        <Name>${LSST_DDS_DOMAIN_NAME:-ospl_sp_ddsi}</Name>
         <Id>${LSST_DDS_DOMAIN_ID:-0}</Id>
         <Description>Federated deployment using shared-memory and standard DDSI networking.</Description>
         <Database>
-            <Size>504857600</Size>
+            <Size>${LSST_DDS_SHMEM_SIZE:-504857600}</Size>
         </Database>
+        <Report verbosity="${LSST_DDS_REPORT_LEVEL:-INFO}"/>
         <Service name="ddsi2">
             <Command>ddsi2</Command>
         </Service>
@@ -56,13 +57,6 @@
                 </Scheduling>
                 <StackSize>6000000</StackSize>
             </ResendManager>
-            <Heartbeat>
-                <Scheduling>
-                    <Class>Default</Class>
-                    <Priority>0</Priority>
-                </Scheduling>
-                <StackSize>6000000</StackSize>
-            </Heartbeat>
         </Daemon>
         <Listeners>
             <StackSize>6000000</StackSize>
@@ -80,7 +74,6 @@
         </Compatibility>
         <Discovery>
             <ParticipantIndex>none</ParticipantIndex>
-            <DSGracePeriod>60s</DSGracePeriod>
         </Discovery>
         <Internal>
             <Watermarks>
@@ -92,8 +85,16 @@
             <SquashParticipants>true</SquashParticipants>
             <ResponsivenessTimeout>${LSST_DDS_RESPONSIVENESS_TIMEOUT:-inf}</ResponsivenessTimeout>
         </Internal>
+        <Tracing>
+            <Verbosity>${LSST_DDSI2_SERVICE_TRACING_VERBOSITY:-none}</Verbosity>
+            <OutputFile>${LSST_DDSI2_SERVICE_TRACING_OUTPUT:-ddsi2.log}</OutputFile>
+        </Tracing>
     </DDSI2Service>
     <DurabilityService name="durability">
+        <Tracing enabled="${LSST_ENABLE_DURABILITY_SERVICE_TRACING:-FALSE}">
+            <Verbosity>${LSST_DURABILITY_SERVICE_TRACING_VERBOSITY:-FINER}</Verbosity>
+            <OutputFile>${LSST_DURABILITY_SERVICE_TRACING_OUTPUT:-durability.log}</OutputFile>
+        </Tracing>
         <Network>
             <InitialDiscoveryPeriod>10.0</InitialDiscoveryPeriod>
             <Alignment>
