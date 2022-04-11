@@ -1,24 +1,28 @@
-## @summary
-##   Install stuff for CCS/SAL gateway.
-##
-## @param rpms
-##   Hash of packages and rpms to install. Eg:
-##   "ts_sal_utils" => "ts_sal_utils-4.0.0-1.x86_64.rpm"
-## @param ospl_home
-##   String giving OSPL_HOME.
-## @param dds_domain
-##   String giving LSST_DDS_DOMAIN (eg base)
-## @param dds_interface
-##   String giving name of SAL interface (eg somehost-dds)
-## @param instrument
-##   String giving instrument (eg comcam).
-## @param rpm_repo
-##   String giving repo url for rpm download
-## @param rpms_private
-##   Optional hash of rpms to download from private repo.
-## @param rpm_repo_private, rpm_user, rpm_pass
-##   Optional strings giving private rpm repo, username and password
-
+# @summary
+#   Install stuff for CCS/SAL gateway.
+#
+# @param rpms
+#   Hash of packages and rpms to install. Eg:
+#   "ts_sal_utils" => "ts_sal_utils-4.0.0-1.x86_64.rpm"
+# @param ospl_home
+#   String giving OSPL_HOME.
+# @param dds_domain
+#   String giving LSST_DDS_DOMAIN (eg base)
+# @param dds_interface
+#   String giving name of SAL interface (eg somehost-dds)
+# @param instrument
+#   String giving instrument (eg comcam).
+# @param rpm_repo
+#   String giving repo url for rpm download
+# @param rpms_private
+#   Optional hash of rpms to download from private repo.
+# @param rpm_repo_private
+#   private repo name
+# @param rpm_user
+#   private repo username
+# @param rpm_pass
+#   private repo password
+#
 class ccs_sal (
   Hash[String,String,1] $rpms,
   ## Change the following in hiera, not here.
@@ -36,9 +40,7 @@ class ccs_sal (
   Optional[String] $rpm_user = undef,
   Optional[String] $rpm_pass = undef,
 ) {
-
   include ccs_sal::rpms
   include ccs_sal::etc
   include ccs_sal::service
-
 }

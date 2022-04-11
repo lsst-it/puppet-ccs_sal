@@ -1,5 +1,4 @@
 class ccs_sal::service {
-
   $common_vars = {
     user    => 'ccs',
     group   => 'ccs',
@@ -17,7 +16,7 @@ class ccs_sal::service {
       env   => 'LSST_DDS_RESPONSIVENESS_TIMEOUT=15s',
       start => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl -f start'",
       stop  => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl stop'",
-    }
+    },
   }
 
   ## 202107: Name changed from ocs-bridge-${instrument}
@@ -27,7 +26,7 @@ class ccs_sal::service {
       desc  => "CCS OCS bridge for ${instrument}",
       env   => 'LSST_DDS_HISTORYSYNC=0',
       start => "/opt/lsst/ccs/prod/bin/${instrument}-ocs-bridge",
-    }
+    },
   }
 
   ## 202107: Name changed from mcm-${instrument}
@@ -36,7 +35,7 @@ class ccs_sal::service {
     vars     => {
       desc    => "CCS MCM for ${instrument}",
       start   => "/opt/lsst/ccs/prod/bin/${instrument}-mcm",
-    }
+    },
   }
 
   ## FIXME ccs_software module can also manage basic services.
@@ -60,7 +59,5 @@ class ccs_sal::service {
     sudo::conf { "ccs-service-${service}":
       content => epp("${module_name}/sudo.epp", $epp_sudo_vars),
     }
-
   }
-
 }

@@ -1,5 +1,4 @@
 class ccs_sal::rpms {
-
   ## Needed by ts_sal_utils.
   ensure_packages(['linuxptp'])
 
@@ -16,7 +15,6 @@ class ccs_sal::rpms {
   }
 
   $ccs_sal::rpms.each |$package, $rpm| {
-
     $file = "/var/tmp/${rpm}"
 
     archive { $file:
@@ -28,7 +26,6 @@ class ccs_sal::rpms {
       *      => $rpm_opts,
     }
   }
-
 
   ## Private rpms.
   $repo_private0 = $ccs_sal::rpm_repo_private
@@ -42,7 +39,6 @@ class ccs_sal::rpms {
   $pass = $ccs_sal::rpm_pass
 
   $ccs_sal::rpms_private.each |$package, $rpm| {
-
     $file = "/var/tmp/${rpm}"
 
     archive { $file:
@@ -57,5 +53,4 @@ class ccs_sal::rpms {
       *      => $rpm_opts,
     }
   }
-
 }
