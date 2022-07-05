@@ -2,9 +2,9 @@
   "name": "lsst-ccs_sal",
   "version": "1.0.0",
   "author": "AURA/LSST/SLAC",
-  "summary": "",
+  "summary": "Configure Rubin Observatory CCS/SAL.",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/lsst-it/puppet-ccs_sal",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
