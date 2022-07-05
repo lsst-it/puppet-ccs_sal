@@ -116,7 +116,9 @@
                     aligner="${LSST_DDS_ALIGNER:-false}"
                     durability="Durable"
                     masterPriority="${OSPL_MASTER_PRIORITY:-1}"
-                    nameSpace="defaultNamespace"/>
+                    nameSpace="defaultNamespace">
+                <Merge scope="*" type="${LSST_DDS_MERGE_POLICY:-Ignore}"/>
+            </Policy>
         </NameSpaces>
     </DurabilityService>
     <TunerService name="cmsoap">
