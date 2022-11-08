@@ -13,7 +13,7 @@ class ccs_sal::service {
     service  => 'opensplice',
     vars     => {
       desc  => 'OpenSpliceDDS daemons',
-      env   => 'LSST_DDS_RESPONSIVENESS_TIMEOUT=15s',
+      env   => ['LSST_DDS_RESPONSIVENESS_TIMEOUT=15s','LSST_DDS_ALIGNER=true','OSPL_MASTER_PRIORITY=10'],
       start => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl -f start'",
       stop  => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl stop'",
     },
@@ -24,7 +24,7 @@ class ccs_sal::service {
     service  => "${instrument}-ocs-bridge",
     vars     => {
       desc  => "CCS OCS bridge for ${instrument}",
-      env   => 'LSST_DDS_HISTORYSYNC=0',
+      env   => ['LSST_DDS_HISTORYSYNC=0'],
       start => "/opt/lsst/ccs/prod/bin/${instrument}-ocs-bridge",
     },
   }

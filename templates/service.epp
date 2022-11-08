@@ -15,8 +15,8 @@ After=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=<%= $workdir %>
-<% unless $env =~ Undef { -%>
-Environment=<%= $env %>
+<% $env.each |$var| { -%>
+Environment=<% $var %>
 <% } -%>
 ExecStart=<%= $start %>
 <% unless $stop =~ Undef { -%>
