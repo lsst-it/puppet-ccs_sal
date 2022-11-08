@@ -4,7 +4,7 @@
       String $start,
       Optional[String] $stop = undef,
       String $workdir,
-      Optional[String] $env = undef
+      Optional[Array] $env = []
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
 [Unit]
@@ -16,7 +16,7 @@ After=network-online.target
 Type=simple
 WorkingDirectory=<%= $workdir %>
 <% $env.each |$var| { -%>
-Environment=<% $var %>
+Environment=<%= $var %>
 <% } -%>
 ExecStart=<%= $start %>
 <% unless $stop =~ Undef { -%>
