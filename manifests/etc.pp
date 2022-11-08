@@ -31,6 +31,7 @@ class ccs_sal::etc {
     }
   }
 
+# lint:ignore:manifest_whitespace_opening_bracket_before
   $instrument = $ccs_sal::instrument ['bridge', 'gui'].each|$thing| {
     $file = "${dir}/${instrument}-ocs-${thing}.app"
     file { $file:
@@ -39,6 +40,7 @@ class ccs_sal::etc {
       *       => $attributes,
     }
   }
+# lint:endignore
 
   ## Stop tmpfiles.d removing opensplice sockets.
   $tmpfiles_conf = 'ccs-ospl.conf'
