@@ -5,9 +5,6 @@
 
 require 'voxpupuli/acceptance/spec_helper_acceptance'
 
-configure_beaker do |host|
-  # /etc/ccs is owned by lsst/ccs_software
-  on host, 'mkdir -p /etc/ccs'
-end
+configure_beaker
 
 Dir['./spec/support/acceptance/**/*.rb'].sort.each { |f| require f }
