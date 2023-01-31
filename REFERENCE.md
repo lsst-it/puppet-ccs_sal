@@ -7,9 +7,9 @@
 ### Classes
 
 * [`ccs_sal`](#ccs_sal): Install stuff for CCS/SAL gateway.
-* [`ccs_sal::etc`](#ccs_saletc)
-* [`ccs_sal::rpms`](#ccs_salrpms)
-* [`ccs_sal::service`](#ccs_salservice)
+* [`ccs_sal::etc`](#ccs_sal--etc)
+* [`ccs_sal::rpms`](#ccs_sal--rpms)
+* [`ccs_sal::service`](#ccs_sal--service)
 
 ## Classes
 
@@ -21,25 +21,25 @@ Install stuff for CCS/SAL gateway.
 
 The following parameters are available in the `ccs_sal` class:
 
-* [`rpms`](#rpms)
-* [`ospl_home`](#ospl_home)
-* [`dds_domain`](#dds_domain)
-* [`dds_interface`](#dds_interface)
-* [`instrument`](#instrument)
-* [`rpm_repo`](#rpm_repo)
-* [`rpms_private`](#rpms_private)
-* [`rpm_repo_private`](#rpm_repo_private)
-* [`rpm_user`](#rpm_user)
-* [`rpm_pass`](#rpm_pass)
+* [`rpms`](#-ccs_sal--rpms)
+* [`ospl_home`](#-ccs_sal--ospl_home)
+* [`dds_domain`](#-ccs_sal--dds_domain)
+* [`dds_interface`](#-ccs_sal--dds_interface)
+* [`instrument`](#-ccs_sal--instrument)
+* [`rpm_repo`](#-ccs_sal--rpm_repo)
+* [`rpms_private`](#-ccs_sal--rpms_private)
+* [`rpm_repo_private`](#-ccs_sal--rpm_repo_private)
+* [`rpm_user`](#-ccs_sal--rpm_user)
+* [`rpm_pass`](#-ccs_sal--rpm_pass)
 
-##### <a name="rpms"></a>`rpms`
+##### <a name="-ccs_sal--rpms"></a>`rpms`
 
 Data type: `Hash[String,String,1]`
 
 Hash of packages and rpms to install. Eg:
 "ts_sal_utils" => "ts_sal_utils-4.0.0-1.x86_64.rpm"
 
-##### <a name="ospl_home"></a>`ospl_home`
+##### <a name="-ccs_sal--ospl_home"></a>`ospl_home`
 
 Data type: `String`
 
@@ -47,7 +47,7 @@ String giving OSPL_HOME.
 
 Default value: `'/opt/OpenSpliceDDS/VX.Y.Z/example/example'`
 
-##### <a name="dds_domain"></a>`dds_domain`
+##### <a name="-ccs_sal--dds_domain"></a>`dds_domain`
 
 Data type: `String`
 
@@ -55,7 +55,7 @@ String giving LSST_DDS_DOMAIN (eg base)
 
 Default value: `'summit'`
 
-##### <a name="dds_interface"></a>`dds_interface`
+##### <a name="-ccs_sal--dds_interface"></a>`dds_interface`
 
 Data type: `String`
 
@@ -63,7 +63,7 @@ String giving name of SAL interface (eg somehost-dds)
 
 Default value: `'localhost-dds'`
 
-##### <a name="instrument"></a>`instrument`
+##### <a name="-ccs_sal--instrument"></a>`instrument`
 
 Data type: `String`
 
@@ -71,7 +71,7 @@ String giving instrument (eg comcam).
 
 Default value: `'comcam'`
 
-##### <a name="rpm_repo"></a>`rpm_repo`
+##### <a name="-ccs_sal--rpm_repo"></a>`rpm_repo`
 
 Data type: `String`
 
@@ -79,7 +79,7 @@ String giving repo url for rpm download
 
 Default value: `'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases'`
 
-##### <a name="rpms_private"></a>`rpms_private`
+##### <a name="-ccs_sal--rpms_private"></a>`rpms_private`
 
 Data type: `Hash[String,String]`
 
@@ -87,39 +87,39 @@ Optional hash of rpms to download from private repo.
 
 Default value: `{}`
 
-##### <a name="rpm_repo_private"></a>`rpm_repo_private`
+##### <a name="-ccs_sal--rpm_repo_private"></a>`rpm_repo_private`
 
 Data type: `Optional[String]`
 
 private repo name
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="rpm_user"></a>`rpm_user`
+##### <a name="-ccs_sal--rpm_user"></a>`rpm_user`
 
 Data type: `Optional[String]`
 
 private repo username
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="rpm_pass"></a>`rpm_pass`
+##### <a name="-ccs_sal--rpm_pass"></a>`rpm_pass`
 
 Data type: `Optional[String]`
 
 private repo password
 
-Default value: ``undef``
+Default value: `undef`
 
-### <a name="ccs_saletc"></a>`ccs_sal::etc`
+### <a name="ccs_sal--etc"></a>`ccs_sal::etc`
 
 The ccs_sal::etc class.
 
-### <a name="ccs_salrpms"></a>`ccs_sal::rpms`
+### <a name="ccs_sal--rpms"></a>`ccs_sal::rpms`
 
 The ccs_sal::rpms class.
 
-### <a name="ccs_salservice"></a>`ccs_sal::service`
+### <a name="ccs_sal--service"></a>`ccs_sal::service`
 
 The ccs_sal::service class.
 
