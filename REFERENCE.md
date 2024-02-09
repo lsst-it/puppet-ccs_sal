@@ -7,9 +7,9 @@
 ### Classes
 
 * [`ccs_sal`](#ccs_sal): Install stuff for CCS/SAL gateway.
-* [`ccs_sal::etc`](#ccs_sal--etc)
-* [`ccs_sal::rpms`](#ccs_sal--rpms)
-* [`ccs_sal::service`](#ccs_sal--service)
+* [`ccs_sal::etc`](#ccs_sal--etc): Configure /etc for CCS/SAL
+* [`ccs_sal::rpms`](#ccs_sal--rpms): Install rpms needed by CCS/SAL
+* [`ccs_sal::service`](#ccs_sal--service): Manage systemd service files for CCS/SAL
 
 ## Classes
 
@@ -26,6 +26,7 @@ The following parameters are available in the `ccs_sal` class:
 * [`dds_domain`](#-ccs_sal--dds_domain)
 * [`dds_interface`](#-ccs_sal--dds_interface)
 * [`instrument`](#-ccs_sal--instrument)
+* [`prefix_service`](#-ccs_sal--prefix_service)
 * [`rpm_repo`](#-ccs_sal--rpm_repo)
 * [`rpms_private`](#-ccs_sal--rpms_private)
 * [`rpm_repo_private`](#-ccs_sal--rpm_repo_private)
@@ -71,6 +72,14 @@ String giving instrument (eg comcam).
 
 Default value: `'comcam'`
 
+##### <a name="-ccs_sal--prefix_service"></a>`prefix_service`
+
+Data type: `Boolean`
+
+Boolean; if false do not prefix systemctl services with the instrument.
+
+Default value: `true`
+
 ##### <a name="-ccs_sal--rpm_repo"></a>`rpm_repo`
 
 Data type: `String`
@@ -113,13 +122,13 @@ Default value: `undef`
 
 ### <a name="ccs_sal--etc"></a>`ccs_sal::etc`
 
-The ccs_sal::etc class.
+Configure /etc for CCS/SAL
 
 ### <a name="ccs_sal--rpms"></a>`ccs_sal::rpms`
 
-The ccs_sal::rpms class.
+Install rpms needed by CCS/SAL
 
 ### <a name="ccs_sal--service"></a>`ccs_sal::service`
 
-The ccs_sal::service class.
+Manage systemd service files for CCS/SAL
 
