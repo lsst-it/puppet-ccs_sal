@@ -12,6 +12,8 @@
 #   String giving name of SAL interface (eg somehost-dds)
 # @param instrument
 #   String giving instrument (eg comcam).
+# @param prefix_service
+#   Boolean; if false do not prefix systemctl services with the instrument.
 # @param rpm_repo
 #   String giving repo url for rpm download
 # @param rpms_private
@@ -30,6 +32,7 @@ class ccs_sal (
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
   String $instrument = 'comcam',
+  Boolean $prefix_service = true,
   ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
   String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases',
   ## If specified, rpms to fetch from _private repo using _user and _pass.
