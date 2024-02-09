@@ -1,3 +1,6 @@
+# @summary
+#   Manage systemd service files for CCS/SAL
+#
 class ccs_sal::service {
   $common_vars = {
     user    => 'ccs',

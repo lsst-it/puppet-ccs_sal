@@ -1,3 +1,6 @@
+# @summary
+#   Configure /etc for CCS/SAL
+#
 class ccs_sal::etc {
   $dir = '/etc/ccs'
 
