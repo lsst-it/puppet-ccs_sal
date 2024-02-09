@@ -1,3 +1,6 @@
+# @summary
+#   Install rpms needed by CCS/SAL
+#
 class ccs_sal::rpms {
   ## Needed by ts_sal_utils.
   ensure_packages(['linuxptp'])

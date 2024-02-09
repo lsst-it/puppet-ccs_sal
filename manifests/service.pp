@@ -1,3 +1,6 @@
+# @summary
+#   Manage systemd service files for CCS/SAL
+#
 class ccs_sal::service {
   $common_vars = {
     user    => 'ccs',
@@ -6,6 +9,13 @@ class ccs_sal::service {
   }
 
   $instrument = $ccs_sal::instrument
+  $prefix_service = $ccs_sal::prefix_service
+
+  if $prefix_service {
+    $prefix = "${instrument}-"
+  } else {
+    $prefix = ''
+  }
 
   $sal_file = '/etc/ccs/setup-sal5'
 
@@ -21,20 +31,20 @@ class ccs_sal::service {
 
   ## 202107: Name changed from ocs-bridge-${instrument}
   $ocs_bridge = {
-    service  => "${instrument}-ocs-bridge",
+    service  => "${prefix}ocs-bridge",
     vars     => {
-      desc  => "CCS OCS bridge for ${instrument}",
+      desc  => 'CCS OCS bridge service',
       env   => ['LSST_DDS_HISTORYSYNC=0'],
-      start => "/opt/lsst/ccs/prod/bin/${instrument}-ocs-bridge",
+      start => "/opt/lsst/ccs/prod/bin/${prefix}ocs-bridge",
     },
   }
 
   ## 202107: Name changed from mcm-${instrument}
   $mcm = {
-    service  => "${instrument}-mcm",
+    service  => "${prefix}mcm",
     vars     => {
-      desc    => "CCS MCM for ${instrument}",
-      start   => "/opt/lsst/ccs/prod/bin/${instrument}-mcm",
+      desc    => 'CCS MCM service',
+      start   => "/opt/lsst/ccs/prod/bin/${prefix}mcm",
     },
   }
 
