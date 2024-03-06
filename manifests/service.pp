@@ -2,6 +2,8 @@
 #   Manage systemd service files for CCS/SAL
 #
 class ccs_sal::service {
+  $dds = $ccs_sal::dds
+
   $common_vars = {
     user    => 'ccs',
     group   => 'ccs',
@@ -49,7 +51,11 @@ class ccs_sal::service {
   }
 
   ## FIXME ccs_software module can also manage basic services.
-  $services = [$opensplice, $ocs_bridge, $mcm]
+  if $dds {
+    $services = [$opensplice, $ocs_bridge, $mcm]
+  } else {
+    $services = [$ocs_bridge, $mcm]
+  }
 
   $services.each | $hash | {
     $service  = $hash['service']

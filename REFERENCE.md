@@ -23,9 +23,16 @@ The following parameters are available in the `ccs_sal` class:
 
 * [`rpms`](#-ccs_sal--rpms)
 * [`ospl_home`](#-ccs_sal--ospl_home)
+* [`dds`](#-ccs_sal--dds)
 * [`dds_domain`](#-ccs_sal--dds_domain)
 * [`dds_interface`](#-ccs_sal--dds_interface)
 * [`instrument`](#-ccs_sal--instrument)
+* [`kafka`](#-ccs_sal--kafka)
+* [`kafka_broker_address`](#-ccs_sal--kafka_broker_address)
+* [`kafka_registry_url`](#-ccs_sal--kafka_registry_url)
+* [`kafka_sasl_username`](#-ccs_sal--kafka_sasl_username)
+* [`kafka_sasl_password`](#-ccs_sal--kafka_sasl_password)
+* [`kafka_templates_directory`](#-ccs_sal--kafka_templates_directory)
 * [`prefix_service`](#-ccs_sal--prefix_service)
 * [`rpm_repo`](#-ccs_sal--rpm_repo)
 * [`rpms_private`](#-ccs_sal--rpms_private)
@@ -47,6 +54,14 @@ Data type: `String`
 String giving OSPL_HOME.
 
 Default value: `'/opt/OpenSpliceDDS/VX.Y.Z/example/example'`
+
+##### <a name="-ccs_sal--dds"></a>`dds`
+
+Data type: `Boolean`
+
+Boolean; if true install DDS support
+
+Default value: `true`
 
 ##### <a name="-ccs_sal--dds_domain"></a>`dds_domain`
 
@@ -71,6 +86,55 @@ Data type: `String`
 String giving instrument (eg comcam).
 
 Default value: `'comcam'`
+
+##### <a name="-ccs_sal--kafka"></a>`kafka`
+
+Data type: `Boolean`
+
+Boolean; if true install Kafka support
+kafka will be used.
+
+Default value: `false`
+
+##### <a name="-ccs_sal--kafka_broker_address"></a>`kafka_broker_address`
+
+Data type: `String`
+
+String giving broker address
+
+Default value: `'sasquatch-tts-kafka-bootstrap.lsst.codes:9094'`
+
+##### <a name="-ccs_sal--kafka_registry_url"></a>`kafka_registry_url`
+
+Data type: `String`
+
+String giving registry URL
+
+Default value: `'https://tucson-teststand.lsst.codes/schema-registry'`
+
+##### <a name="-ccs_sal--kafka_sasl_username"></a>`kafka_sasl_username`
+
+Data type: `String`
+
+String giving SASL username
+
+Default value: `'username'`
+
+##### <a name="-ccs_sal--kafka_sasl_password"></a>`kafka_sasl_password`
+
+Data type: `String`
+
+String giving SASL password
+
+Default value: `'password'`
+
+##### <a name="-ccs_sal--kafka_templates_directory"></a>`kafka_templates_directory`
+
+Data type: `String`
+
+String giving location of templates directory
+
+Default value: `'/home/tonyj/avro-templates'`
 
 ##### <a name="-ccs_sal--prefix_service"></a>`prefix_service`
 

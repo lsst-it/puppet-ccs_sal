@@ -1,0 +1,5 @@
+<%- | String $prefile, Optional[String] $extra = undef | -%>
+system.pre-execute=<%= $prefile %>
+<% unless $extra =~ Undef { -%>
+<%= $extra %>
+<% } -%>
