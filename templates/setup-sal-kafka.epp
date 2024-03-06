@@ -1,0 +1,14 @@
+<%- | String $templates_directory,
+      String $broker_address,
+      String $sasl_username,
+      String $sasl_password,
+      String $registry_url,
+| -%>
+# This file is managed by Puppet; changes may be overwritten.
+export LSST_AVRO_TEMPLATES=<%= $templates_directory %>
+export LSST_KAFKA_BROKER_ADDR=<%= $broker_address %>
+export LSST_SECURITY_PROTOCOL=SASL_SSL
+export LSST_SASL_USERNAME=<%= $sasl_username %>
+export LSST_SASL_PASSWORD="<%= $sasl_password %>"
+export LSST_TOPIC_SUBNAME=sal
+export LSST_SCHEMA_REGISTRY_URL=<%= $registry_url %>
