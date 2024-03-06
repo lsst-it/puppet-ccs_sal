@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.2.2](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.2.2) (2024-03-06)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.2.1...v2.2.2)
+
+**Implemented enhancements:**
+
+- Add option to use kafka instead of dds [\#32](https://github.com/lsst-it/puppet-ccs_sal/pull/32) ([glennmorris](https://github.com/glennmorris))
+
 ## [v2.2.1](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.2.1) (2024-02-09)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.2.0...v2.2.1)
@@ -11,6 +19,10 @@ These should not affect the functionality of the module.
 **Implemented enhancements:**
 
 - Add option to not apply instrument- prefix to service names [\#30](https://github.com/lsst-it/puppet-ccs_sal/pull/30) ([glennmorris](https://github.com/glennmorris))
+
+**Merged pull requests:**
+
+- Bump version to 2.2.1 [\#31](https://github.com/lsst-it/puppet-ccs_sal/pull/31) ([glennmorris](https://github.com/glennmorris))
 
 ## [v2.2.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.2.0) (2023-10-04)
 
