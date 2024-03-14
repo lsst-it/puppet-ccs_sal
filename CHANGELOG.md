@@ -10,6 +10,7 @@ These should not affect the functionality of the module.
 
 **Implemented enhancements:**
 
+- Bump version to 2.2.2 [\#33](https://github.com/lsst-it/puppet-ccs_sal/pull/33) ([glennmorris](https://github.com/glennmorris))
 - Add option to use kafka instead of dds [\#32](https://github.com/lsst-it/puppet-ccs_sal/pull/32) ([glennmorris](https://github.com/glennmorris))
 
 ## [v2.2.1](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.2.1) (2024-02-09)
