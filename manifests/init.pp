@@ -31,6 +31,8 @@
 #   Boolean; if false do not prefix systemctl services with the instrument.
 # @param rpm_repo
 #   String giving repo url for rpm download
+# @param rpm_requirements
+#   Array of system rpm requirements to install
 # @param rpms_private
 #   Optional hash of rpms to download from private repo.
 # @param rpm_repo_private
@@ -57,6 +59,7 @@ class ccs_sal (
   Boolean $prefix_service = true,
   ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
   String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases',
+  Array[String] $rpm_requirements = ['linuxptp'],
   ## If specified, rpms to fetch from _private repo using _user and _pass.
   Hash[String,String] $rpms_private = {},
   ## Defaults to _repo with yum -> yum_private.

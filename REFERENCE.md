@@ -35,6 +35,7 @@ The following parameters are available in the `ccs_sal` class:
 * [`kafka_templates_directory`](#-ccs_sal--kafka_templates_directory)
 * [`prefix_service`](#-ccs_sal--prefix_service)
 * [`rpm_repo`](#-ccs_sal--rpm_repo)
+* [`rpm_requirements`](#-ccs_sal--rpm_requirements)
 * [`rpms_private`](#-ccs_sal--rpms_private)
 * [`rpm_repo_private`](#-ccs_sal--rpm_repo_private)
 * [`rpm_user`](#-ccs_sal--rpm_user)
@@ -151,6 +152,14 @@ Data type: `String`
 String giving repo url for rpm download
 
 Default value: `'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases'`
+
+##### <a name="-ccs_sal--rpm_requirements"></a>`rpm_requirements`
+
+Data type: `Array[String]`
+
+Array of system rpm requirements to install
+
+Default value: `['linuxptp']`
 
 ##### <a name="-ccs_sal--rpms_private"></a>`rpms_private`
 
