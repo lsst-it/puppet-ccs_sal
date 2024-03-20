@@ -2,8 +2,9 @@
 #   Install rpms needed by CCS/SAL
 #
 class ccs_sal::rpms {
-  ## Needed by ts_sal_utils.
-  ensure_packages(['linuxptp'])
+  $reqs = $ccs_sal::rpm_requirements
+
+  ensure_packages($reqs)
 
   ## Public rpms.
   $repo = $ccs_sal::rpm_repo
