@@ -179,7 +179,7 @@ Default value: `undef`
 
 ##### <a name="-ccs_sal--rpm_user"></a>`rpm_user`
 
-Data type: `Optional[String]`
+Data type: `Optional[Variant[Sensitive[String[1]],String[1]]]`
 
 private repo username
 
@@ -187,7 +187,7 @@ Default value: `undef`
 
 ##### <a name="-ccs_sal--rpm_pass"></a>`rpm_pass`
 
-Data type: `Optional[String]`
+Data type: `Optional[Variant[Sensitive[String[1]],String[1]]]`
 
 private repo password
 

@@ -65,8 +65,8 @@ class ccs_sal (
   ## Defaults to _repo with yum -> yum_private.
   Optional[String] $rpm_repo_private = undef,
   ## In lsst-puppet-hiera-private.
-  Optional[String] $rpm_user = undef,
-  Optional[String] $rpm_pass = undef,
+  Optional[Variant[Sensitive[String[1]],String[1]]] $rpm_user = undef,
+  Optional[Variant[Sensitive[String[1]],String[1]]] $rpm_pass = undef,
 ) {
   if $dds {
     include ccs_sal::rpms
