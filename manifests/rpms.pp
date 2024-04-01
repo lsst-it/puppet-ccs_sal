@@ -39,8 +39,8 @@ class ccs_sal::rpms {
     $repo_private = regsubst($repo, 'yum', 'yum_private')
   }
 
-  $user = $ccs_sal::rpm_user
-  $pass = $ccs_sal::rpm_pass
+  $user = $ccs_sal::rpm_user.unwrap
+  $pass = $ccs_sal::rpm_pass.unwrap
 
   $ccs_sal::rpms_private.each |$package, $rpm| {
     $file = "/var/tmp/${rpm}"
