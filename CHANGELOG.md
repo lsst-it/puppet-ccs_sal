@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.3.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.3.0) (2024-03-20)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.2.3...v2.3.0)
+
+**Implemented enhancements:**
+
+- Make required system rpms customizable [\#35](https://github.com/lsst-it/puppet-ccs_sal/pull/35) ([glennmorris](https://github.com/glennmorris))
+
 ## [v2.2.3](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.2.3) (2024-03-14)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.2.2...v2.2.3)
