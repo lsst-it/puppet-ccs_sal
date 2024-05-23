@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.4.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.4.0) (2024-05-23)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.3.0...v2.4.0)
+
+**Implemented enhancements:**
+
+- \(puppet-ccs\_sal\) add apache license [\#38](https://github.com/lsst-it/puppet-ccs_sal/pull/38) ([dtapiacl](https://github.com/dtapiacl))
+
+**Fixed bugs:**
+
+- Make the prefix\_service option also apply to .app file names [\#39](https://github.com/lsst-it/puppet-ccs_sal/pull/39) ([glennmorris](https://github.com/glennmorris))
+
 ## [v2.3.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.3.0) (2024-03-20)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.2.3...v2.3.0)
