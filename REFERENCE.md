@@ -142,6 +142,7 @@ Default value: `'/home/tonyj/avro-templates'`
 Data type: `Boolean`
 
 Boolean; if false do not prefix systemctl services with the instrument.
+Also applies to the .app files in /etc/ccs.
 
 Default value: `true`
 
