@@ -5,6 +5,8 @@ class ccs_sal::etc {
   $dds = $ccs_sal::dds
   $kafka = $ccs_sal::kafka
 
+  $prefix_service = $ccs_sal::prefix_service
+
   $dir = '/etc/ccs'
 
   $attributes = {
@@ -68,9 +70,14 @@ class ccs_sal::etc {
     }
   }
 
-# lint:ignore:manifest_whitespace_opening_bracket_before
-  $instrument = $ccs_sal::instrument ['bridge', 'gui'].each|$thing| {
-    $file = "${dir}/${instrument}-ocs-${thing}.app"
+  if $prefix_service {
+    $prefix = "${$ccs_sal::instrument}-"
+  } else {
+    $prefix = ''
+  }
+
+  ['bridge', 'gui'].each|$thing| {
+    $file = "${dir}/${prefix}ocs-${thing}.app"
     file { $file:
       ensure  => file,
       content => epp("${ptitle}/ocs-app.epp", {
@@ -81,7 +88,6 @@ class ccs_sal::etc {
       *       => $attributes,
     }
   }
-# lint:endignore
 
   if $dds {
     ## Stop tmpfiles.d removing opensplice sockets.
