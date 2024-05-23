@@ -29,6 +29,7 @@
 #   String giving location of templates directory
 # @param prefix_service
 #   Boolean; if false do not prefix systemctl services with the instrument.
+#   Also applies to the .app files in /etc/ccs.
 # @param rpm_repo
 #   String giving repo url for rpm download
 # @param rpm_requirements
