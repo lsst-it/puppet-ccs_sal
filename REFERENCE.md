@@ -26,6 +26,7 @@ The following parameters are available in the `ccs_sal` class:
 * [`dds`](#-ccs_sal--dds)
 * [`dds_domain`](#-ccs_sal--dds_domain)
 * [`dds_interface`](#-ccs_sal--dds_interface)
+* [`dds_extra`](#-ccs_sal--dds_extra)
 * [`instrument`](#-ccs_sal--instrument)
 * [`kafka`](#-ccs_sal--kafka)
 * [`kafka_broker_address`](#-ccs_sal--kafka_broker_address)
@@ -79,6 +80,14 @@ Data type: `String`
 String giving name of SAL interface (eg somehost-dds)
 
 Default value: `'localhost-dds'`
+
+##### <a name="-ccs_sal--dds_extra"></a>`dds_extra`
+
+Data type: `String`
+
+String giving extra content for DDS setup file.
+
+Default value: `'export LD_PRELOAD=${JAVA_HOME}/jre/lib/amd64/libjsig.so'`
 
 ##### <a name="-ccs_sal--instrument"></a>`instrument`
 
