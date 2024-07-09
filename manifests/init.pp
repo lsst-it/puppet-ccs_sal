@@ -12,6 +12,8 @@
 #   String giving LSST_DDS_DOMAIN (eg base)
 # @param dds_interface
 #   String giving name of SAL interface (eg somehost-dds)
+# @param dds_extra
+#   String giving extra content for DDS setup file.
 # @param instrument
 #   String giving instrument (eg comcam).
 # @param kafka
@@ -50,6 +52,7 @@ class ccs_sal (
   Boolean $dds = true,
   String $dds_domain = 'summit',
   String $dds_interface = 'localhost-dds',
+  String $dds_extra = 'export LD_PRELOAD=${JAVA_HOME}/jre/lib/amd64/libjsig.so',
   String $instrument = 'comcam',
   Boolean $kafka = false,
   String $kafka_broker_address = 'sasquatch-tts-kafka-bootstrap.lsst.codes:9094',
