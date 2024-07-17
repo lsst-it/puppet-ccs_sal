@@ -55,6 +55,7 @@ class ccs_sal::etc {
           'domain'    => $ccs_sal::dds_domain,
           'interface' => $ccs_sal::dds_interface,
           'home'      => $ccs_sal::ospl_home,
+          'java_home' => $ccs_sal::java_home,
           'extra'     => $ccs_sal::dds_extra,
         },
       ),

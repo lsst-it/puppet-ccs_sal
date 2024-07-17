@@ -16,6 +16,8 @@
 #   String giving extra content for DDS setup file.
 # @param instrument
 #   String giving instrument (eg comcam).
+# @param java_home
+#   String giving JAVA_HOME (only used by DDS).
 # @param kafka
 #   Boolean; if true install Kafka support
 #   kafka will be used.
@@ -54,6 +56,7 @@ class ccs_sal (
   String $dds_interface = 'localhost-dds',
   String $dds_extra = 'export LD_PRELOAD=${JAVA_HOME}/jre/lib/amd64/libjsig.so',
   String $instrument = 'comcam',
+  String $java_home = '/usr/java/default',
   Boolean $kafka = false,
   String $kafka_broker_address = 'sasquatch-tts-kafka-bootstrap.lsst.codes:9094',
   String $kafka_registry_url = 'https://tucson-teststand.lsst.codes/schema-registry',
