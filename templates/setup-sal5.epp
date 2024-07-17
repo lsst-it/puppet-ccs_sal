@@ -1,6 +1,7 @@
 <%- | String $domain,
       String $interface,
       String $home,
+      String $java_home,
       Optional[String] $extra = undef
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
@@ -9,7 +10,7 @@ export LSST_DDS_INTERFACE=<%= $interface %>
 export OSPL_HOME=<%= $home %>
 source $OSPL_HOME/release.com
 export OSPL_RELEASE=$(idlpp -v | sed -e 's|.*: ||')
-export JAVA_HOME=/usr/java/default
+export JAVA_HOME=<%= $java_home %>
 export LD_LIBRARY_PATH=/opt/lsst/ts_sal/lib:$LD_LIBRARY_PATH
 export OSPL_URI=file:///etc/ccs/ospl-shmem.xml
 export LSST_DDS_QOS=file:///etc/ccs/QoS.xml

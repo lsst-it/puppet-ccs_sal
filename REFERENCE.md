@@ -28,6 +28,7 @@ The following parameters are available in the `ccs_sal` class:
 * [`dds_interface`](#-ccs_sal--dds_interface)
 * [`dds_extra`](#-ccs_sal--dds_extra)
 * [`instrument`](#-ccs_sal--instrument)
+* [`java_home`](#-ccs_sal--java_home)
 * [`kafka`](#-ccs_sal--kafka)
 * [`kafka_broker_address`](#-ccs_sal--kafka_broker_address)
 * [`kafka_registry_url`](#-ccs_sal--kafka_registry_url)
@@ -96,6 +97,14 @@ Data type: `String`
 String giving instrument (eg comcam).
 
 Default value: `'comcam'`
+
+##### <a name="-ccs_sal--java_home"></a>`java_home`
+
+Data type: `String`
+
+String giving JAVA_HOME (only used by DDS).
+
+Default value: `'/usr/java/default'`
 
 ##### <a name="-ccs_sal--kafka"></a>`kafka`
 
