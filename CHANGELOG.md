@@ -4,12 +4,21 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.7.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.7.0) (2024-08-07)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.6.0...v2.7.0)
+
+**Implemented enhancements:**
+
+- allow puppet/systemd 7.x [\#46](https://github.com/lsst-it/puppet-ccs_sal/pull/46) ([jhoblitt](https://github.com/jhoblitt))
+
 ## [v2.6.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.6.0) (2024-07-17)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.5.0...v2.6.0)
 
 **Implemented enhancements:**
 
+- Version 2.6.0 [\#44](https://github.com/lsst-it/puppet-ccs_sal/pull/44) ([glennmorris](https://github.com/glennmorris))
 - \(setup-sal5\) allow customization of JAVA\_HOME [\#43](https://github.com/lsst-it/puppet-ccs_sal/pull/43) ([glennmorris](https://github.com/glennmorris))
 
 ## [v2.5.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.5.0) (2024-07-09)
