@@ -1,0 +1,10 @@
+<%- | Variant[Sensitive[String],String] $id,
+      Variant[Sensitive[String],String] $secret,
+      String $endpoint,
+      String $bucket,
+| -%>
+# This file is managed by Puppet; changes may be overwritten.
+id: <%= $id %>
+secret: <%= $secret %>
+endpoint: <%= $endpoint %>
+bucket: <%= $bucket %>

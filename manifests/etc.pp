@@ -103,4 +103,16 @@ class ccs_sal::etc {
       mode   => '0644',
     }
   }
+
+  $lfa = $ccs_sal::lfa
+
+  unless empty($lfa) {
+    file { "${dir}/lfa.properties":
+      ensure  => file,
+      owner   => 'ccs',
+      group   => 'ccsadm',
+      mode    => '0660',
+      content => epp("${ptitle}/lfa.epp", $lfa ),
+    }
+  }
 }
