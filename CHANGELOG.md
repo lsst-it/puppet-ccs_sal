@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.8.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.8.0) (2024-08-29)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.7.0...v2.8.0)
+
+**Implemented enhancements:**
+
+- Add option to write lfa.properties file [\#48](https://github.com/lsst-it/puppet-ccs_sal/pull/48) ([glennmorris](https://github.com/glennmorris))
+
 ## [v2.7.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.7.0) (2024-08-07)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.6.0...v2.7.0)
