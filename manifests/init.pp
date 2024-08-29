@@ -31,6 +31,9 @@
 #   String giving SASL password
 # @param kafka_templates_directory
 #   String giving location of templates directory
+# @param lfa
+#   Hash of properties (id, secret, endpoint, bucket) for large file
+#   annex (lfa) configuration.
 # @param prefix_service
 #   Boolean; if false do not prefix systemctl services with the instrument.
 #   Also applies to the .app files in /etc/ccs.
@@ -63,6 +66,7 @@ class ccs_sal (
   String $kafka_sasl_password = 'password',
   String $kafka_sasl_username = 'username',
   String $kafka_templates_directory = '/home/tonyj/avro-templates', # FIXME
+  Hash $lfa = {},
   Boolean $prefix_service = true,
   ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
   String $rpm_repo = 'https://repo-nexus.lsst.org/nexus/repository/ts_yum/releases',
