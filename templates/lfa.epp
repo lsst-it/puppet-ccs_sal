@@ -4,7 +4,7 @@
       String $bucket,
 | -%>
 # This file is managed by Puppet; changes may be overwritten.
-id: <%= $id %>
-secret: <%= $secret %>
-endpoint: <%= $endpoint %>
-bucket: <%= $bucket %>
+lfa.id: <%= $id %>
+lfa.secret: <%= $secret %>
+lfa.endpoint: <%= $endpoint %>
+lfa.bucket: <%= $bucket %>
