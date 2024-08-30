@@ -1,6 +1,6 @@
 {
   "name": "lsst-ccs_sal",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "author": "AURA/LSST/SLAC",
   "summary": "Configure Rubin Observatory CCS/SAL.",
   "license": "Apache-2.0",
