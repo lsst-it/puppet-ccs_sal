@@ -4,12 +4,25 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.9.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.9.0) (2024-10-23)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.8.1...v2.9.0)
+
+**Implemented enhancements:**
+
+- \(puppet-ccs\_sal\) bump saz/sudo version constraint to less than version 10.0.0 [\#56](https://github.com/lsst-it/puppet-ccs_sal/pull/56) ([badenerb](https://github.com/badenerb))
+
+## [v2.8.1](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.8.1) (2024-08-30)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.8.0...v2.8.1)
+
 ## [v2.8.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.8.0) (2024-08-29)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.7.0...v2.8.0)
 
 **Implemented enhancements:**
 
+- Version 2.8.0 [\#49](https://github.com/lsst-it/puppet-ccs_sal/pull/49) ([glennmorris](https://github.com/glennmorris))
 - Add option to write lfa.properties file [\#48](https://github.com/lsst-it/puppet-ccs_sal/pull/48) ([glennmorris](https://github.com/glennmorris))
 
 ## [v2.7.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.7.0) (2024-08-07)
@@ -169,19 +182,19 @@ These should not affect the functionality of the module.
 
 ## [v0.6.1](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.6.1) (2021-07-27)
 
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.5.0...v0.6.1)
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.6.0...v0.6.1)
 
 **Merged pull requests:**
 
 - Split rpms and their yum repos into private and public [\#5](https://github.com/lsst-it/puppet-ccs_sal/pull/5) ([glennmorris](https://github.com/glennmorris))
 
-## [v0.5.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.5.0) (2021-05-22)
-
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.6.0...v0.5.0)
-
 ## [v0.6.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.6.0) (2021-05-22)
 
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.4.0...v0.6.0)
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.5.0...v0.6.0)
+
+## [v0.5.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.5.0) (2021-05-22)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.4.0...v0.5.0)
 
 ## [v0.4.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.4.0) (2021-05-12)
 
