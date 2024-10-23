@@ -22,7 +22,6 @@ These should not affect the functionality of the module.
 
 **Implemented enhancements:**
 
-- Version 2.8.0 [\#49](https://github.com/lsst-it/puppet-ccs_sal/pull/49) ([glennmorris](https://github.com/glennmorris))
 - Add option to write lfa.properties file [\#48](https://github.com/lsst-it/puppet-ccs_sal/pull/48) ([glennmorris](https://github.com/glennmorris))
 
 ## [v2.7.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.7.0) (2024-08-07)
