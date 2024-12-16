@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.10.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.10.0) (2024-12-16)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.9.0...v2.10.0)
+
+**Implemented enhancements:**
+
+- \(metadata.json\) update Puppet/Systemd to v8 [\#58](https://github.com/lsst-it/puppet-ccs_sal/pull/58) ([badenerb](https://github.com/badenerb))
+
 ## [v2.9.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.9.0) (2024-10-23)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.8.1...v2.9.0)
