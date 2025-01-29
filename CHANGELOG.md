@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.11.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.11.0) (2025-01-29)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.10.0...v2.11.0)
+
+**Implemented enhancements:**
+
+- Remove avro templates setting from the config file [\#60](https://github.com/lsst-it/puppet-ccs_sal/pull/60) ([glennmorris](https://github.com/glennmorris))
+
 ## [v2.10.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.10.0) (2024-12-16)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.9.0...v2.10.0)
@@ -189,19 +197,19 @@ These should not affect the functionality of the module.
 
 ## [v0.6.1](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.6.1) (2021-07-27)
 
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.6.0...v0.6.1)
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.5.0...v0.6.1)
 
 **Merged pull requests:**
 
 - Split rpms and their yum repos into private and public [\#5](https://github.com/lsst-it/puppet-ccs_sal/pull/5) ([glennmorris](https://github.com/glennmorris))
 
-## [v0.6.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.6.0) (2021-05-22)
-
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.5.0...v0.6.0)
-
 ## [v0.5.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.5.0) (2021-05-22)
 
-[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.4.0...v0.5.0)
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.6.0...v0.5.0)
+
+## [v0.6.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.6.0) (2021-05-22)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v0.4.0...v0.6.0)
 
 ## [v0.4.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v0.4.0) (2021-05-12)
 
