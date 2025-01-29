@@ -37,11 +37,10 @@ class ccs_sal::etc {
     file { "${dir}/${kafka_salfile}":
       ensure  => file,
       content => epp("${ptitle}/${kafka_salfile}.epp", {
-          'templates_directory' => $ccs_sal::kafka_templates_directory,
-          'broker_address'      => $ccs_sal::kafka_broker_address,
-          'sasl_username'       => $ccs_sal::kafka_sasl_username,
-          'sasl_password'       => $ccs_sal::kafka_sasl_password,
-          'registry_url'        => $ccs_sal::kafka_registry_url,
+          'broker_address' => $ccs_sal::kafka_broker_address,
+          'sasl_username'  => $ccs_sal::kafka_sasl_username,
+          'sasl_password'  => $ccs_sal::kafka_sasl_password,
+          'registry_url'   => $ccs_sal::kafka_registry_url,
         },
       ),
       *       => $attributes,

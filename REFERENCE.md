@@ -34,7 +34,6 @@ The following parameters are available in the `ccs_sal` class:
 * [`kafka_registry_url`](#-ccs_sal--kafka_registry_url)
 * [`kafka_sasl_username`](#-ccs_sal--kafka_sasl_username)
 * [`kafka_sasl_password`](#-ccs_sal--kafka_sasl_password)
-* [`kafka_templates_directory`](#-ccs_sal--kafka_templates_directory)
 * [`lfa`](#-ccs_sal--lfa)
 * [`prefix_service`](#-ccs_sal--prefix_service)
 * [`rpm_repo`](#-ccs_sal--rpm_repo)
@@ -147,14 +146,6 @@ Data type: `String`
 String giving SASL password
 
 Default value: `'password'`
-
-##### <a name="-ccs_sal--kafka_templates_directory"></a>`kafka_templates_directory`
-
-Data type: `String`
-
-String giving location of templates directory
-
-Default value: `'/home/tonyj/avro-templates'`
 
 ##### <a name="-ccs_sal--lfa"></a>`lfa`
 
