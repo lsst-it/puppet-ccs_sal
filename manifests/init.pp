@@ -29,8 +29,6 @@
 #   String giving SASL username
 # @param kafka_sasl_password
 #   String giving SASL password
-# @param kafka_templates_directory
-#   String giving location of templates directory
 # @param lfa
 #   Hash of properties (id, secret, endpoint, bucket) for large file
 #   annex (lfa) configuration.
@@ -65,7 +63,6 @@ class ccs_sal (
   String $kafka_registry_url = 'https://tucson-teststand.lsst.codes/schema-registry',
   String $kafka_sasl_password = 'password',
   String $kafka_sasl_username = 'username',
-  String $kafka_templates_directory = '/home/tonyj/avro-templates', # FIXME
   Hash $lfa = {},
   Boolean $prefix_service = true,
   ## Old: http://www.slac.stanford.edu/~gmorris/lsst/pkgarchive
