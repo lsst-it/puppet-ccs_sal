@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.12.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.12.0) (2025-10-03)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.11.0...v2.12.0)
+
+**Implemented enhancements:**
+
+- Update dependency voxpupuli-test to v13 [\#73](https://github.com/lsst-it/puppet-ccs_sal/pull/73) ([renovate[bot]](https://github.com/apps/renovate))
+- \(metadata.json\) Bump puppet archiver to v8 [\#71](https://github.com/lsst-it/puppet-ccs_sal/pull/71) ([badenerb](https://github.com/badenerb))
+- Update dependency voxpupuli-test to v12 [\#70](https://github.com/lsst-it/puppet-ccs_sal/pull/70) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/labeler action to v6 [\#69](https://github.com/lsst-it/puppet-ccs_sal/pull/69) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v5 [\#67](https://github.com/lsst-it/puppet-ccs_sal/pull/67) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.11.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.11.0) (2025-01-29)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.10.0...v2.11.0)
