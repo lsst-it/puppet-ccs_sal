@@ -14,20 +14,12 @@ class ccs_sal::etc {
 
   $ptitle = regsubst($title, '::.*', '', 'G')
 
-  $kafka_salfile = 'setup-sal-kafka'
   $prefile = 'setup-sal'
+  $oldfile = 'setup-sal-kafka'
 
   file { "${dir}/${prefile}":
-    ensure => file,
-    source => "puppet:///modules/${ptitle}/${prefile}",
-    *      => $attributes,
-  }
-
-  $implementation = 'system.property.org.lsst.sal.implementation=kafka'
-
-  file { "${dir}/${kafka_salfile}":
     ensure  => file,
-    content => epp("${ptitle}/${kafka_salfile}.epp", {
+    content => epp("${ptitle}/${prefile}.epp", {
         'broker_address' => $ccs_sal::kafka_broker_address,
         'sasl_username'  => $ccs_sal::kafka_sasl_username,
         'sasl_password'  => $ccs_sal::kafka_sasl_password,
@@ -35,6 +27,11 @@ class ccs_sal::etc {
       },
     ),
     *       => $attributes,
+  }
+
+  file { "${dir}/${oldfile}":
+    ensure => link,
+    target => $prefile,
   }
 
   if $prefix_service {
@@ -49,7 +46,6 @@ class ccs_sal::etc {
       ensure  => file,
       content => epp("${ptitle}/ocs-app.epp", {
           'prefile' => $prefile,
-          'extra'   => $implementation,
         },
       ),
       *       => $attributes,

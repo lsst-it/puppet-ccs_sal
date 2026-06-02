@@ -1,3 +1,0 @@
-# -*- mode: sh; -*-
-# This file is managed by Puppet; changes may be overwritten.
-source /etc/ccs/setup-sal-kafka

@@ -1,5 +1,6 @@
 <%- | String $prefile, Optional[String] $extra = undef | -%>
 system.pre-execute=<%= $prefile %>
+system.property.org.lsst.sal.implementation=kafka
 <% unless $extra =~ Undef { -%>
 <%= $extra %>
 <% } -%>
