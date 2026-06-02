@@ -2,8 +2,6 @@
 #   Manage systemd service files for CCS/SAL
 #
 class ccs_sal::service {
-  $dds = $ccs_sal::dds
-
   $common_vars = {
     user    => 'ccs',
     group   => 'ccs',
@@ -17,18 +15,6 @@ class ccs_sal::service {
     $prefix = "${instrument}-"
   } else {
     $prefix = ''
-  }
-
-  $sal_file = '/etc/ccs/setup-sal5'
-
-  $opensplice = {
-    service  => 'opensplice',
-    vars     => {
-      desc  => 'OpenSpliceDDS daemons',
-      env   => ['LSST_DDS_RESPONSIVENESS_TIMEOUT=15s','LSST_DDS_ALIGNER=true','OSPL_MASTER_PRIORITY=10'],
-      start => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl -f start'",
-      stop  => "/bin/bash -c 'source ${sal_file} && \$OSPL_HOME/bin/ospl stop'",
-    },
   }
 
   ## 202107: Name changed from ocs-bridge-${instrument}
@@ -51,11 +37,7 @@ class ccs_sal::service {
   }
 
   ## FIXME ccs_software module can also manage basic services.
-  if $dds {
-    $services = [$opensplice, $ocs_bridge, $mcm]
-  } else {
-    $services = [$ocs_bridge, $mcm]
-  }
+  $services = [$ocs_bridge, $mcm]
 
   $services.each | $hash | {
     $service  = $hash['service']
