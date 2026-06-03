@@ -1,7 +1,0 @@
-# -*- mode: sh; -*-
-# This file is managed by Puppet; changes may be overwritten.
-if [ -z "${LSST_USE_KAFKA}" ]; then
-    source /etc/ccs/setup-sal5
-else
-    source /etc/ccs/setup-sal-kafka
-fi
