@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.0.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v3.0.0) (2026-06-03)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.12.0...v3.0.0)
+
+**Breaking changes:**
+
+- Remove DDS support, unconditionally use Kafka [\#83](https://github.com/lsst-it/puppet-ccs_sal/pull/83) ([glennmorris](https://github.com/glennmorris))
+- drop puppet 7 [\#81](https://github.com/lsst-it/puppet-ccs_sal/pull/81) ([glennmorris](https://github.com/glennmorris))
+
+**Implemented enhancements:**
+
+- Update dependency voxpupuli-test to v14 [\#80](https://github.com/lsst-it/puppet-ccs_sal/pull/80) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency puppet\_metadata to v6 [\#79](https://github.com/lsst-it/puppet-ccs_sal/pull/79) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v6 [\#78](https://github.com/lsst-it/puppet-ccs_sal/pull/78) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/labeler action to v6 [\#77](https://github.com/lsst-it/puppet-ccs_sal/pull/77) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.12.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v2.12.0) (2025-10-03)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.11.0...v2.12.0)
