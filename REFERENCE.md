@@ -93,4 +93,3 @@ Configure /etc for CCS/SAL
 ### <a name="ccs_sal--service"></a>`ccs_sal::service`
 
 Manage systemd service files for CCS/SAL
-
