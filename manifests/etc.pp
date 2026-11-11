@@ -16,17 +16,22 @@ class ccs_sal::etc {
 
   $prefile = 'setup-sal'
   $oldfile = 'setup-sal-kafka'
+  $propfile = 'kafka-broker-sal.properties'
 
-  file { "${dir}/${prefile}":
-    ensure  => file,
-    content => epp("${ptitle}/${prefile}.epp", {
-        'broker_address' => $ccs_sal::kafka_broker_address,
-        'sasl_username'  => $ccs_sal::kafka_sasl_username,
-        'sasl_password'  => $ccs_sal::kafka_sasl_password,
-        'registry_url'   => $ccs_sal::kafka_registry_url,
-      },
-    ),
-    *       => $attributes,
+  $files = [$prefile, $propfile]
+
+  $files.each |String $file| {
+    file { "${dir}/${file}":
+      ensure  => file,
+      content => epp("${ptitle}/${file}.epp", {
+          'broker_address' => $ccs_sal::kafka_broker_address,
+          'sasl_username'  => $ccs_sal::kafka_sasl_username,
+          'sasl_password'  => $ccs_sal::kafka_sasl_password,
+          'registry_url'   => $ccs_sal::kafka_registry_url,
+        },
+      ),
+      *       => $attributes,
+    }
   }
 
   file { "${dir}/${oldfile}":
