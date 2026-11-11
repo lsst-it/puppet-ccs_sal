@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.1.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v3.1.0) (2026-11-11)
+
+[Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v3.0.0...v3.1.0)
+
+**Implemented enhancements:**
+
+- new config file kafka-broker-sal.properties [\#88](https://github.com/lsst-it/puppet-ccs_sal/pull/88) ([glennmorris](https://github.com/glennmorris))
+- Update actions/labeler action to v7 [\#86](https://github.com/lsst-it/puppet-ccs_sal/pull/86) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v7 [\#85](https://github.com/lsst-it/puppet-ccs_sal/pull/85) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v3.0.0](https://github.com/lsst-it/puppet-ccs_sal/tree/v3.0.0) (2026-06-03)
 
 [Full Changelog](https://github.com/lsst-it/puppet-ccs_sal/compare/v2.12.0...v3.0.0)
